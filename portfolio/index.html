@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Sanskar Dhapse, B.Tech CSE (AI & ML) student at JSPM University, Pune." />
+  <title>Sanskar Dhapse | Portfolio</title>
+  <style>
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #e5eaf2;
+      --surface: #ffffff;
+      --soft: #f4f7fc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink); background: #fff; line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1100px, 90%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { font-weight: 800; font-size: 1.15rem; letter-spacing: -.5px; }
+    .logo span { color: var(--blue); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 22px; color: #475569; font-size: .92rem; }
+    .navlinks a:hover { color: var(--blue); }
+    .hero { padding: 88px 0 78px; background: linear-gradient(135deg, #f7faff 0%, #fff 58%, #eef4ff 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.5fr .8fr; align-items: center; gap: 55px; }
+    .eyebrow { color: var(--blue); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: .78rem; }
+    h1 { font-size: clamp(2.7rem, 6vw, 4.6rem); line-height: 1.08; letter-spacing: -2px; margin: 14px 0 18px; }
+    h1 span { color: var(--blue); }
+    .lead { color: var(--muted); font-size: 1.12rem; max-width: 650px; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 28px; }
+    .btn { display: inline-block; padding: 12px 20px; border-radius: 9px; font-weight: 700; border: 1px solid var(--blue); }
+    .btn.primary { background: var(--blue); color: #fff; }
+    .btn.primary:hover { background: var(--blue-dark); }
+    .btn.secondary { color: var(--blue); background: #fff; }
+    .avatar {
+      width: min(260px, 70vw);
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 24px;
+      margin: auto;
+      display: block;
+      box-shadow: 0 25px 60px rgba(37,99,235,.2);
+    }
+    section { padding: 76px 0; }
+    section.alt { background: var(--soft); }
+    .section-title { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.8px; }
+    .section-intro { color: var(--muted); margin: 0 0 32px; max-width: 700px; }
+    .about-grid, .edu-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 25px; box-shadow: 0 8px 24px rgba(15,23,42,.035); }
+    .card h3 { margin: 0 0 8px; font-size: 1.12rem; }
+    .muted { color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { padding: 8px 13px; border-radius: 999px; background: #eaf1ff; color: #1e40af; font-size: .9rem; font-weight: 650; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project-tag { display: inline-block; color: var(--blue); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 8px; }
+    .project-card { display: flex; flex-direction: column; align-items: flex-start; }
+    .project-card p { color: var(--muted); margin: 0; }
+    .timeline { border-left: 2px solid #cfe0ff; padding-left: 22px; }
+    .timeline-item { position: relative; margin: 0 0 24px; }
+    .timeline-item::before { content: ""; position: absolute; left: -29px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--blue); border: 3px solid #dbeafe; }
+    .contact-box { background: #eff6ff; border: 1px solid #dbeafe; border-radius: 18px; padding: 30px; }
+    footer { padding: 25px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; text-align: center; }
+    @media (max-width: 760px) {
+      .hero-grid, .about-grid, .edu-grid, .cards { grid-template-columns: 1fr; }
+      .hero { padding: 62px 0; }
+      .avatar { width: 180px; }
+      nav { align-items: flex-start; padding: 16px 0; flex-direction: column; }
+      .navlinks { gap: 12px 17px; }
+      section { padding: 58px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">Sanskar<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
+        <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Welcome to my portfolio</div>
+          <h1>Hi, I'm <span>Sanskar Dhapse</span></h1>
+          <p class="lead">A 2nd-year B.Tech student in Computer Science and Engineering (AI &amp; ML) at JSPM University, Pune. I'm interested in software development, web technologies and artificial intelligence.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore my work</a>
+            <a class="btn secondary" href="#contact">Contact me</a>
+          </div>
+        </div>
+        <img class="avatar" src="profile.png" alt="Portrait of Sanskar Dhapse">
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">A little introduction.</p>
+        <div class="about-grid">
+          <div class="card">
+            <h3>Who I am</h3>
+            <p class="muted">I'm a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning. I enjoy learning how technology works and applying what I learn through practical projects. I'm building my skills in programming, web development and problem-solving.</p>
+          </div>
+          <div class="card">
+            <h3>What I'm interested in</h3>
+            <div class="chips">
+              <span class="chip">Web Development</span><span class="chip">Artificial Intelligence</span>
+              <span class="chip">Machine Learning</span><span class="chip">Programming</span>
+              <span class="chip">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <p class="section-intro">My academic journey.</p>
+        <div class="card">
+          <h3>Bachelor of Technology — Computer Science &amp; Engineering (AI &amp; ML)</h3>
+          <p class="muted">JSPM University, Pune · 2nd Year</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-intro">Technologies and topics I've worked with or am learning.</p>
+        <div class="card">
+          <div class="chips">
+            <span class="chip">C</span><span class="chip">Java</span><span class="chip">Python</span>
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            <span class="chip">WebSockets</span><span class="chip">Machine Learning</span>
+            <span class="chip">Git &amp; GitHub</span>
+          </div>
+          <p class="muted" style="margin-bottom:0;margin-top:16px;font-size:.9rem;">Edit this list to reflect your current skill level and the tools you can confidently use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="experience">
+      <div class="container">
+        <h2 class="section-title">Internship Experience</h2>
+        <p class="section-intro">Practical learning and project experience.</p>
+        <div class="card timeline">
+          <div class="timeline-item">
+            <h3>Full Stack Web Development Intern</h3>
+            <p class="muted">SkillInfytech IT Solutions Private Limited</p>
+            <p class="muted">Worked on web development concepts and a chat application project using WebSockets. Add your internship dates and a brief list of your exact responsibilities here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-intro">A selection of projects to showcase practical learning.</p>
+        <div class="cards">
+          <article class="card project-card">
+            <span class="project-tag">Web Development</span>
+            <h3>Real-Time Chat Application</h3>
+            <p>A chat application concept using WebSockets to support real-time communication. Add your GitHub repository link and screenshots.</p>
+          </article>
+          <article class="card project-card">
+            <span class="project-tag">Web Development</span>
+            <h3>Health &amp; Nutrition Website</h3>
+            <p>An informational website covering nutrients such as vitamins, carbohydrates and proteins, with an emphasis on clear presentation.</p>
+          </article>
+          <article class="card project-card">
+            <span class="project-tag">Data Science</span>
+            <h3>Titanic Survival Prediction</h3>
+            <p>A beginner data science project exploring passenger data and survival prediction. Add the tools, results and repository link.</p>
+          </article>
+          <article class="card project-card">
+            <span class="project-tag">Data Analysis</span>
+            <h3>Netflix User Behaviour Analysis</h3>
+            <p>An analysis project exploring viewing patterns and user behaviour. Add your analysis details and project link.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="certificates">
+      <div class="container">
+        <h2 class="section-title">Certificates &amp; Achievements</h2>
+        <p class="section-intro">Add your verified certificates, workshops and academic achievements here.</p>
+        <div class="card">
+          <h3>Internship Certificate</h3>
+          <p class="muted">Full Stack Web Development Internship — SkillInfytech IT Solutions Private Limited</p>
+          <p class="muted" style="margin-bottom:0;">Add a certificate image or a link to the certificate when ready.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-intro">I'm open to learning, collaborating and connecting with people in technology.</p>
+        <div class="contact-box">
+          <p>
+  <strong>Email:</strong>
+  <a href="mailto:sanskardhapse866@gmail.com">
+    sanskardhapse866@gmail.com
+  </a>
+</p>
+
+<p>
+  <strong>LinkedIn:</strong>
+  <a href="https://linkedin.com/in/dhapse-sanskar-0975bb449" target="_blank">
+    https://linkedin.com/in/dhapse-sanskar-0975bb449
+  </a>
+</p>
+
+<p>
+  <strong>GitHub:</strong>
+  <a href="https://github.com/sanskardhapse20" target="_blank">
+    https://github.com/sanskardhapse20
+  </a>
+</p>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Sanskar Dhapse. Built with HTML &amp; CSS.</div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
